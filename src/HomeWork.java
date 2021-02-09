@@ -9,5 +9,9 @@ public class HomeWork {
         float floatValue = 10000f;
         char charValue = '*';
     }
+    public static float CalcResult (float a, float b, float c, float d) {
+        var result = a * (b + (c / d));
+        return result;
+    }
     }
 }
