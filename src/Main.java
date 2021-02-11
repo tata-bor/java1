@@ -1,7 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        HomeWork.whatYear(800);
-
+        System.out.println("Hello, world!");
     }
 }
 
