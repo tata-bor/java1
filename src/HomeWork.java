@@ -39,6 +39,21 @@ public class HomeWork {
             return true;
         }
     }
-    public static void Hello (String name) {
-        System.out.println("Привет, "+ name);}
+
+    public static void Hello(String name) {
+        System.out.println("Привет, " + name);
+
+    }
+
+    public static void whatYear(int year) {
+        if (year % 400 == 0) {
+            System.out.println(year + " - високосный год.");
+        } else if (year % 100 == 0) {
+            System.out.println(year + " - невисокосный год.");
+        } else if (year % 4 == 0) {
+            System.out.println(year + " - високосный год.");
+        } else {
+            System.out.println(year + " - невисокосный год.");
+        }
+    }
 }
