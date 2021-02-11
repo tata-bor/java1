@@ -23,4 +23,13 @@ public class HomeWork {
             return false;
         }
     }
+
+    public static void CalcResult3(int a) {
+        if (a >= 0) {
+            System.out.println("Вы передали положительное число");
+        } else {
+            System.out.println("Вы передали отрицательное число");
+        }
+    }
+
 }
