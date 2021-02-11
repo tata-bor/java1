@@ -32,4 +32,11 @@ public class HomeWork {
         }
     }
 
+    public static boolean CalcResult4(int a) {
+        if (a >= 0) {
+            return false;
+        } else {
+            return true;
+        }
+    }
 }

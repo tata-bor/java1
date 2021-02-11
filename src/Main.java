@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) {
-        HomeWork.CalcResult3(-1);
-
+        boolean res = HomeWork.CalcResult4(-1);
+        System.out.println(res);
     }
 }
 
