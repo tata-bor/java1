@@ -39,4 +39,6 @@ public class HomeWork {
             return true;
         }
     }
+    public static void Hello (String name) {
+        System.out.println("Привет, "+ name);}
 }
