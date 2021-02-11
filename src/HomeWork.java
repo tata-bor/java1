@@ -1,5 +1,5 @@
 public class HomeWork {
-    public static void initialize () {
+    public static void initialize() {
         byte byteValue = -110;
         boolean booleanValue = true;
         short shortValue = 1123;
@@ -9,9 +9,18 @@ public class HomeWork {
         float floatValue = 10000f;
         char charValue = '*';
     }
-    public static float CalcResult (float a, float b, float c, float d) {
+
+    public static float CalcResult1(float a, float b, float c, float d) {
         var result = a * (b + (c / d));
         return result;
     }
+
+    public static boolean CalcResult2(int a, int b) {
+        var sum = a + b;
+        if (sum > 10 && sum < 20) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
