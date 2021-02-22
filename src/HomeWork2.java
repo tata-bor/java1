@@ -1,3 +1,5 @@
+import com.sun.source.doctree.SummaryTree;
+
 import java.util.Arrays;
 
 public class HomeWork2 {
@@ -78,4 +80,34 @@ public class HomeWork2 {
         }
         System.out.println(min + " " + max + " ");
     }
+
+    //Задание 6
+
+    public static boolean SetArray6(int arr6[]) {
+        int leftIndex = 0;
+        int rightIndex = arr6.length - 1;
+        int leftSum = arr6[leftIndex];
+        int rightSum = arr6[rightIndex];
+        while (true) {
+            if (leftIndex == rightIndex - 1) {
+                if (leftSum == rightSum) {
+                    return true;
+                } else {
+                    return false;
+                }
+            } else {
+                if (leftSum <= rightSum) {
+                    leftIndex++;
+                    leftSum += arr6[leftIndex];
+                } else {
+                    rightIndex--;
+                    rightSum += arr6[rightIndex];
+                }
+            }
+        }
+    }
+
+
+
 }
+
