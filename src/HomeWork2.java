@@ -59,4 +59,23 @@ public class HomeWork2 {
             System.out.println();
         }
     }
+
+    //Задание 5
+
+    public static void SetArray5() {
+        int[] arr5 = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
+        int min = arr5[0];
+        int max = arr5[0];
+        for (int i = 0; i < arr5.length; i++) {
+            if (arr5[i] > max) {
+                max = arr5[i];
+
+                if (arr5[i] < min) {
+                    min = arr5[i];
+                }
+            }
+
+        }
+        System.out.println(min + " " + max + " ");
+    }
 }
