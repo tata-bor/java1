@@ -12,7 +12,19 @@ public class HomeWork2 {
             }
         }
         for (int i = 0; i < 10; i++) {
-            System.out.println (arr [i]);
+            System.out.print (arr [i] + " ");
+        }
+    }
+
+    //Задание 2
+
+    public static void SetArray2() {
+        int arr2 [] = new int [8];
+        for (int i = 0; i < arr2.length; i++) {
+            arr2 [i] = i * 3;
+        }
+        for (int i = 0; i < arr2.length; i++) {
+            System.out.print (arr2 [i] + " ");
         }
     }
 }
