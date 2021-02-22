@@ -40,4 +40,23 @@ public class HomeWork2 {
             System.out.print(arr3[i] + " ");
         }
     }
+
+    // Задание 4
+
+    public static void SetArray4() {
+        int[][] table = new int[10][10];
+        for (int i = 0; i < table.length; i++) {
+            for (int j = 0; j < table[i].length; j++) {
+                if (i == j) {
+                    table[i][j] = 1;
+                }
+            }
+        }
+        for (int i = 0; i < table.length; i++) {
+            for (int j = 0; j < table[i].length; j++) {
+                System.out.print(table[i][j]);
+            }
+            System.out.println();
+        }
+    }
 }
