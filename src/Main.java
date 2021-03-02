@@ -5,10 +5,11 @@ public class Main {
     public static void main(String[] args) {
         /* Cat cat = new Cat("Barsik", 5);
         Plate plate = new Plate(100);
-        plate.info();
         cat.eat(plate);
         plate.info(); */
-        Plate plate = new Plate(20);
+
+        Plate plate = new Plate(50);
+        plate.info();
         Cat[] catArray = new Cat[5];
         catArray[0] = new Cat("Tom", 10);
         catArray[1] = new Cat("Jerry", 5);
@@ -20,6 +21,9 @@ public class Main {
             catArray[i].eat(plate);
             catArray[i].print();
         }
+        plate.info();
+        plate.giveFood(20);
+        plate.info();
     }
 }
 
