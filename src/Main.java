@@ -1,5 +1,10 @@
+import HomeWork8.MyWindow;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        var game = new HomeWork4();
+        game.Run();
     }
 }
+
+
