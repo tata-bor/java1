@@ -1,7 +1,10 @@
+import HomeWork8.IContinueGame;
+import HomeWork8.MyWindow;
+
 import java.util.Random;
 import java.util.Scanner;
 
-public class HomeWork4 {
+public class HomeWork4 implements IContinueGame {
     private static final char X = 'X';
     private static final char O = '0';
     private static final char DEFAULT = '_';
@@ -10,42 +13,14 @@ public class HomeWork4 {
     private Random rand = new Random();
     // 0 - default, 1 - x, 2 - 0
     private int[][] map = new int[SIZE_MAP][SIZE_MAP];
+    private MyWindow window;
 
     // Запуск игры
 
     public void Run() {
         System.out.println ("Вы в игре Крестики Нолики.");
+        window = new MyWindow(map, this);
         DrawMap();
-        while (true) {
-            System.out.println("Введите x y");
-            var scanner = new Scanner(System.in);
-            var x = scanner.nextInt();
-            var y = scanner.nextInt();
-
-            if (map[x][y] != 0) {
-                System.out.println("Поле занято. Выберите другое");
-                continue;
-            }
-            map[x][y] = 1;
-            DrawMap();
-            if (CheckVictory(1)) {
-                System.out.println("Победа!");
-                break;
-            }
-
-            if (CalcUnusedCells() == 0) {
-                System.out.println("Ничья");
-                break;
-            }
-            AITurn();
-            DrawMap();
-
-            if (CheckVictory(2)) {
-                System.out.println("Лузер!");
-                break;
-            }
-
-        }
     }
 
     // Ход компьютера
@@ -141,7 +116,8 @@ public class HomeWork4 {
     // Отображение поля
 
     private void DrawMap() {
-        for (int y = 0; y < SIZE_MAP; y++) {
+        window.Redraw(map);
+ /*       for (int y = 0; y < SIZE_MAP; y++) {
             System.out.print(DELIMITER);
             for (int x = 0; x < SIZE_MAP; x++) {
 
@@ -161,6 +137,32 @@ public class HomeWork4 {
             }
             System.out.println();
         }
+
+  */
+    }
+
+    @Override
+    public void Execute() {
+
+        DrawMap();
+
+        if (CheckVictory(1)) {
+            System.out.println("Победа!");
+            return;
+        }
+
+        if (CalcUnusedCells() == 0) {
+            System.out.println("Ничья");
+            return;
+        }
+        AITurn();
+        DrawMap();
+
+        if (CheckVictory(2)) {
+            System.out.println("Лузер!");
+            return;
+        }
+
     }
 }
 
